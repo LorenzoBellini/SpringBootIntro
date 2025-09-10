@@ -1,0 +1,60 @@
+* O que é Spring Boot?
+    Criado pela Spring Source em 2012
+    Facilita setup de projetos Spring
+    Elimina a necessidade de criar arquivos de configuração, aumentando foco em produtividade
+    Melhora o tempo no desenvolvimento de valor
+
+* Spring Framework envolve:
+    Web
+    Data
+    AOP
+    Core
+
+* Quais problemas ele resolve?
+    Produtividade: Simplifica o setup de projetos
+    Starters: Dependências auto configuráveis pelo Spring Boot
+    Execução simplificada: Sem deploy em servidor externo
+    Configuração: Arquivo externo para configuração
+    Valor: Maior tempo em desenvolvimento
+
+
+* Sobre Auto Configuration
+    Antes do Spring Boot:
+        Configurações eram feitas manualmente (muitos arquivos XML)
+        Spring MVC também era configurado manualmente: Dispatcher, Servlet, web.xml, spring-mvc.xml
+        Configuração dos beans Spring era manual, também se aplica ao Spring Data, Spring Security, etc
+
+    Auto Configuration:
+        Veio para tornar transparente as configurações
+        Starters: dependencias simplificadas e auto configuráveis
+        Identificação e configuração automática da dependência
+        Spring Boot detecta as dependencias e configura para nós
+        Projetos ficam simplificados e prontos
+
+
+* FatJar/UberJar
+    Antes do SpringBoot:
+        Aplicação web precisava ser compactada em um arquivo war, e depois enviada ao cliente
+        Dependência de um container web ou servidor de Aplicação
+        Complexidade grande para configurações
+        Atualizações frequentes, junto com versão do projeto
+        Gerenciamento manual de configurações
+    
+    FatJar e UberJar
+        Artefato do projeto pronto para Execução
+        Container web embutido na geração e execução (Tomcat)
+        Deploy embarcado com outros containers são opcionais
+        Dependências principais do projeto embarcadas
+        Execução direta através de um único java -jar
+
+
+* Profiles e Configurações
+    Importância do uso de Profiles
+        Ambientes para desenvolvimento (Developing), teste (staging) e produção (production)
+        Configurações diferentes para cada ambiente
+        Banco de dados para cada ambiente
+        Execução de testes unitários em ambiente local
+        Suíte de testes completas em ambiente de teste
+        Simulação do ambiente real em staging
+        Deploy simplificado em produção
+        Spring Boot Profiles* (configurações próprias para cada ambiente. Ambientes com sua configuração: dev, production)
